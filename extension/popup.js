@@ -30,7 +30,7 @@ document.getElementById('scanBtn').addEventListener('click', async () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': 'my-secret-student-key-123'
+                'x-api-key': "dvkljwfij248uqiek@#$_$#Feneiiefn"
             },
             body: JSON.stringify({ text: textToAnalyze })
         });
