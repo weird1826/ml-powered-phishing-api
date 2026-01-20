@@ -209,3 +209,5 @@ __marimo__/
 data/*.csv
 !data/phishing_email.csv
 data/*.zip
+
+extension/
