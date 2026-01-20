@@ -1,9 +1,19 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 
 # 1. Initialize the App
 app = FastAPI(title="Phishing Detector API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # or ["*"] to allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],     # GET, POST, etc.
+    allow_headers=["*"],     # allow any headers
+)
+
 
 # 2. Load the Model (The "Brain")
 # We load this globally so we don't have to reload it for every single request (Efficiency!)
